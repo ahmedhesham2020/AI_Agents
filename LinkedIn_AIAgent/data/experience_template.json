@@ -1,0 +1,51 @@
+{
+  "_instructions": "Copy this file to experience.json and fill in your details. Remove this _instructions field.",
+  "name": "Your Name",
+  "current_title": "Software Engineer",
+  "seniority": "mid",
+  "years_of_experience": 4,
+  "preferred_roles": [
+    "Backend Engineer",
+    "Senior Software Engineer",
+    "Platform Engineer"
+  ],
+  "preferred_location": "Remote",
+  "skills": [
+    "Python",
+    "JavaScript",
+    "React",
+    "PostgreSQL",
+    "Docker",
+    "AWS",
+    "REST API",
+    "Git"
+  ],
+  "education": {
+    "degree": "B.S. Computer Science",
+    "school": "Your University",
+    "year": 2020
+  },
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "Current Company",
+      "years": 2,
+      "highlights": [
+        "Built REST APIs serving 1M+ daily users",
+        "Reduced infrastructure costs by 30% via AWS optimization"
+      ]
+    },
+    {
+      "title": "Junior Developer",
+      "company": "Previous Company",
+      "years": 2,
+      "highlights": [
+        "Developed React frontend components"
+      ]
+    }
+  ],
+  "certifications": [],
+  "industries_of_interest": ["Fintech", "SaaS", "AI/ML"],
+  "salary_target_usd": 150000,
+  "open_to_relocation": false
+}

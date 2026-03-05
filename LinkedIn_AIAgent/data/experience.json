@@ -1,0 +1,30 @@
+{
+  "name": "Ahmed Hesham Abd El-Aziz",
+  "current_title": "Validation & Integration Test Engineer",
+  "seniority": "mid",
+  "years_of_experience": 3,
+  "skills": [
+    "Python",
+    "Robot Framework",
+    "CANoe",
+    "CAPL",
+    "UDS (ISO 14229)",
+    "Cybersecurity Testing",
+    "Embedded Systems",
+    "Automotive ECUs",
+    "Ethernet",
+    "CAN",
+    "JIRA",
+    "Git",
+    "HSM/HSE",
+    "AI-Assisted Automation"
+  ],
+  "preferred_roles": [
+    "Embedded Software Test Engineer",
+    "Validation & Integration Engineer",
+    "Automotive Test Engineer",
+    "Automation Engineer (Python/Robot Framework)"
+  ],
+  "preferred_location": "Remote",
+  "experience_summary": "Embedded Software Engineer with 3 years of experience in automotive software validation and integration testing at Valeo. Specialized in CANoe/CAPL scripting, UDS diagnostics, and cybersecurity testing."
+}
