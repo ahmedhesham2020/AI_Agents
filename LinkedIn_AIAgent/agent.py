@@ -52,6 +52,7 @@ SYSTEM_PROMPT = """You are a LinkedIn Job Agent — an intelligent coordinator (
 - match_jobs_to_experience.py --jobs data/raw_jobs.json --profile data/experience.json: Rank scraped jobs.
 - read_jobs.py --path data/matched_jobs.json --exclude-company "CompanyA,CompanyB" --limit 10: Read and display matched jobs. Use --exclude-company to filter out unwanted companies.
 - scrape_job_details.py --url "LINKEDIN_URL": Get full description for a specific job URL.
+- send_telegram.py --jobs data/matched_jobs.json [--limit 10] [--min-score 20]: Send matched job listings to the user's Telegram chat.
 
 ## Decision Logic
 - To find jobs:
@@ -60,6 +61,9 @@ SYSTEM_PROMPT = """You are a LinkedIn Job Agent — an intelligent coordinator (
   3. match_jobs_to_experience.py --jobs data/raw_jobs.json --profile data/experience.json
   4. read_jobs.py --path data/matched_jobs.json [--exclude-company "..."] → then present results to user. STOP.
 - To analyze a job URL: scrape_job_details.py --url "URL" → match_jobs_to_experience --mode gap
+- To send jobs to Telegram: send_telegram.py --jobs data/matched_jobs.json [--limit N] [--min-score N]
+  - If the user asks to send jobs to Telegram after a search, run send_telegram.py immediately on data/matched_jobs.json.
+  - If no search has been done yet, run the full find-jobs flow first, then send_telegram.py.
 
 ## Rules
 - NEVER use load_experience.py on any file other than data/experience.json.
@@ -124,6 +128,8 @@ def detect_intent(user_message: str) -> str:
         return "scrape_job_skills"
     if any(w in msg for w in ["setup", "install", "configure", "start"]):
         return "setup"
+    if any(w in msg for w in ["telegram", "send", "notify", "notification"]):
+        return "send_telegram"
     return "general"
 
 
